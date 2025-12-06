@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Badillo Family | Gallery</title>
+
+  <meta name="description" content="Photo gallery of the Badillo family and pets.">
+  <meta name="author" content="Julia Badillo">
+  <meta name="keywords" content="Badillo family, photo gallery, family photos, pets">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header"> 
+    <div class="logo-circle">
+  <img src="familycrest.jpeg" alt="Logo Image">
+</div>
+    <div class="title-area"> 
+      <h1>The Badillo Family</h1>
+      <p class="tagline">Love, Laughter, + Loyalty</p>
+    </div> 
+  </header> 
+        
+  <hr class="top-rule"> 
+
+  <nav class="main-nav"> 
+    <a href="index.html">Home</a> 
+    <a href="information.html">Information</a> 
+    <a href="gallery.html" class="active">Gallery</a> 
+    <a href="contact.html">Contact</a>
+  </nav> 
+
+  <hr> 
+
+  <main>
+    <section class="gallery-hero">
+      <h2>Family Gallery</h2>
+      <p>Flip through some of my favorite photos of my family and our pets.</p>
+    </section>
+
+    <section class="gallery-slider">
+      <div class="slider-window">
+        <img
+          src="dad.JPG"
+          alt="Family photo"
+          class="slider-image"
+          id="current-slide"
+        />
+      </div>
+
+      <div class="slider-caption" id="slide-caption">
+        My dad and I at a Dave Matthews concert.
+      </div>
+
+      <div class="slider-controls">
+        <button type="button" id="prev-btn">&#10094; Previous</button>
+        <button type="button" id="next-btn">Next &#10095;</button>
+      </div>
+    </section>
+    <section class="gallery-video">
+      <h3>Family Moments Video</h3>
+      <p>
+        This short clip highlights one of my favorite memories with Lucky.
+        The video shows Lucky and I playing in the living room.
+      </p>
+
+      <video controls width="640">
+        <source src="family-moments.MP4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <p class="gallery-note">
+        Want to learn more about where I study?
+        Visit <a href="https://www.asu.edu" target="_blank" rel="noopener">Arizona State University</a>.
+      </p>
+    </section>
+  </main>
+        
+  <footer class="site-footer"> 
+    <p>&copy; 2025 Badillo Family</p> 
+    <p>Contact: thebadillofamily@email.com</p> 
+    <p class="footer-links"> 
+      Home &nbsp;•&nbsp; Privacy Policy &nbsp;•&nbsp; Terms 
+    </p> 
+  </footer> 
+
+  <script>
+    const slides = [
+      {
+        src: "christmas.png",
+        alt: "Family Christmas photo",
+        caption: "My families finished gingerbread houses."
+      },
+      {
+        src: "Sara.png",
+        alt: "Young photo",
+        caption: "A young photo of Julia, Lucky, Buddy, and Sara."
+      },
+      {
+        src: "sara&julia.JPG",
+        alt: "Sara and Julia",
+        caption: "Sara and I on my birthday."
+      },
+      {
+        src: "Pooh.png",
+        alt: "Pooh",
+        caption: "Pooh sitting in a small box."
+      },
+      {
+        src: "momanddad.jpg",
+        alt: "Mom and Dad",
+        caption: "Young photo of Janine and Ruben."
+      },
+      {
+        src: "Alex.png",
+        alt: "Alex",
+        caption: "Alex and our grandma at Thanksgiving."
+      },
+      {
+        src: "MOM.png",
+        alt: "Mom",
+        caption: "My mom and her bestfriend Kelly after a paint and sip night."
+      },
+      {
+        src: "alexb.png",
+        alt: "Alex",
+        caption: "Alex and I before my college graduation."
+      }
+    ];
+
+    let currentIndex = 0;
+
+    const imageEl = document.getElementById("current-slide");
+    const captionEl = document.getElementById("slide-caption");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    function showSlide(index) {
+      const slide = slides[index];
+      imageEl.src = slide.src;
+      imageEl.alt = slide.alt;
+      captionEl.textContent = slide.caption;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    });
+  </script>
+</body>
+</

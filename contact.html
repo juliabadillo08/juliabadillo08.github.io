@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Badillo Family | Contact</title>
+
+  <meta name="description" content="Contact the Badillo family using this message form.">
+  <meta name="author" content="Julia Badillo">
+<meta name="keywords" content="Badillo family, contact form, email, message">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header"> 
+    <div class="logo-circle">
+  <img src="familycrest.jpeg" alt="Logo Image">
+</div>
+    <div class="title-area"> 
+      <h1>The Badillo Family</h1>
+      <p class="tagline">Love, Laughter, + Loyalty</p>
+    </div> 
+  </header> 
+        
+  <hr class="top-rule"> 
+
+  <nav class="main-nav"> 
+    <a href="index.html">Home</a> 
+    <a href="information.html">Information</a> 
+    <a href="gallery.html">Gallery</a> 
+    <a href="contact.html" class="active">Contact</a>
+  </nav> 
+
+  <hr> 
+
+  <main>
+    <section class="contact-wrapper">
+      <h2 class="contact-title">Contact the<br>Badillo Family</h2>
+      <p class="contact-subtitle">Fill out the form below<br>to send us a message.</p>
+
+      <hr class="contact-rule">
+
+      <form class="contact-form" action="#" method="post">
+        <div class="contact-field">
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full-name" name="full-name" required>
+        </div>
+
+        <div class="contact-field">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="contact-field">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="contact-field">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <div class="contact-button-row">
+          <button type="submit" class="contact-button">Send Message</button>
+        </div>
+      </form>
+    </section>
+  </main>
+        
+  <footer class="site-footer"> 
+    <p>&copy; 2025 Badillo Family</p> 
+    <p>Contact: thebadillofamily@email.com</p> 
+    <p class="footer-links"> 
+      Home &nbsp;•&nbsp; Privacy Policy &nbsp;•&nbsp; Terms 
+    </p> 
+  </footer> 
+</body>
+</html>
