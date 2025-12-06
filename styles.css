@@ -24,22 +24,34 @@ body {
 
 
 .logo-circle {
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   border: 3px solid #e39a6f;
+  overflow: hidden;    
   background-color: #ffe4cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    
+  display: block;
+}
+
 
 .title-area h1 {
   margin: 0;
-  font-size: 5rem;
+  font-size: 10rem;
   font-family: 'Poppins', sans-serif;
 }
 
 .tagline {
   margin: 0.25rem 0 0;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #75452a;
   font-family: 'Poppins', sans-serif;
 }
@@ -55,7 +67,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 11rem;
-  font-size: 2rem;
+  font-size: 4rem;
   padding: 0.5rem 1rem;
   background-color: #ffe4cf;
   font-weight: 600;
@@ -83,7 +95,7 @@ main {
 }
 
 .meet-heading {
-  font-size: 3rem;
+  font-size: 5rem;
   margin-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
   text-align: left;
@@ -111,14 +123,14 @@ main {
 .row-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 23rem;
+  gap: 18rem;
 }
 
 .person-card {
   display: flex;
   align-items: flex-start;
-  gap: 1.5rem;
-  width: 400px;
+  gap: 3rem;
+  width: 650px;
   max-width: 100%;
   text-align: left;
   margin-bottom: 3rem;
@@ -156,12 +168,12 @@ overflow: hidden;
 
 .person-card h3 {
   margin: 0.25rem 0;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .person-card p {
   margin: 0.2rem 0 0;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 
@@ -170,7 +182,7 @@ overflow: hidden;
   padding: 1.5rem 1rem;
   background-color: #f7c9a9;
   border-top: 2px solid #d9a27b;
-  font-size: 0.9rem;
+  font-size: 2.2rem;
 }
 
 .site-footer p {
@@ -193,26 +205,27 @@ overflow: hidden;
   padding: 2rem;
   font-family: 'Poppins', sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  margin-left: 5rem;
 }
 
 .who-am-i h2 {
   margin-top: 0;
-  font-size: 2.2rem;
+  font-size: 3.5rem;
 }
 
 .who-am-i p {
-  font-size: 1.2rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 .who-am-i ul {
   padding-left: 1.2rem;
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 2.5rem;
 }
 .who-photo {
-  width: 350px; 
-  height: 350px;
+  width: 500px; 
+  height: 500px;
   border-radius: 10px;
   overflow: hidden;
   margin: 0 auto 1.5rem;
@@ -240,11 +253,318 @@ overflow: hidden;
   .row-content {
     justify-content: flex-start;
   }
-    .content-layout {
+
+  .content-layout {
     grid-template-columns: 1fr;
   }
 
   .who-am-i {
     margin-top: 2rem;
+  }
 }
+
+
+
+.info-hero {
+  max-width: 900px;
+  margin: 2rem auto 3rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info-hero h2 {
+  font-size: 5.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-hero p {
+  font-size: 3rem;
+}
+
+.info-section {
+  margin-bottom: 3.5rem;
+}
+
+.info-section h3 {
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.info-card {
+  background-color: #ffe4cf;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  font-family: 'Poppins', sans-serif;
+}
+
+.info-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 3.5rem;
+}
+
+.info-card p {
+  margin: 0.3rem 0;
+  font-size: 3rem;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #5c3620;
+}
+
+@media (max-width: 700px) {
+  .info-hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .info-hero p,
+  .info-card p {
+    font-size: 1rem;
+  }
+}
+
+.gallery-hero {
+  max-width: 800px;
+  margin: 2rem auto 3rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.gallery-hero h2 {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-hero p {
+  font-size: 3rem;
+}
+
+.gallery-slider {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.slider-window {
+  width: 100%;
+  max-width: 2000px;
+  height: 1000px;
+  margin: 0 auto 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 3px solid #e0a57a;
+  background-color: #ffe4cf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slider-caption {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #5c3620;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.slider-controls button {
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  border: 2px solid #5c3620;
+  background-color: #ffe4cf;
+  font-size: 3.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.slider-controls button:hover,
+.slider-controls button:focus {
+  background-color: #f7c9a9;
+}
+
+.contact-wrapper {
+  max-width: 700px;
+  margin: 3rem auto 4rem;
+  padding: 2.5rem 2rem 3rem;
+  background-color: #ffe4cf;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.contact-title {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 6rem;
+  text-align: center;
+  margin: 0 0 0.5rem;
+  line-height: 1.1;
+}
+
+.contact-subtitle {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0 0 1.5rem;
+}
+
+.contact-rule {
+  border: none;
+  border-top: 2px solid #333;
+  margin: 0 auto 2rem;
+  max-width: 500px;
+}
+
+.contact-form {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.contact-field {
+  margin-bottom: 1.4rem;
+}
+
+.contact-field label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 2.5rem;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border: 2px solid #333;
+  border-radius: 0.5rem;
+  background-color: #fffdf8;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-field textarea {
+  resize: vertical;
+}
+
+.contact-button-row {
+  margin-top: 1.8rem;
+  text-align: center;
+}
+
+.contact-button {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 4rem;
+  padding: 0.6rem 2.2rem;
+  background-color: #ffe4cf;
+  border: 2px solid #333;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: inline-block;
+  box-shadow: 3px 3px 0 #333;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+}
+
+.contact-button:hover,
+.contact-button:focus {
+  background-color: #f7c9a9;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #333;
+}
+
+@media (max-width: 600px) {
+  .contact-wrapper {
+    margin: 2rem 1rem 3rem;
+    padding: 2rem 1.5rem 2.5rem;
+  }
+
+  .contact-title {
+    font-size: 2.4rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .contact-field label {
+    font-size: 1.2rem;
+  }
+}
+
+.family-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 900px;
+  margin: 1rem 0 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+}
+
+.family-table caption {
+  caption-side: top;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.family-table th,
+.family-table td {
+  border: 1px solid #5c3620;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 2.5rem;
+}
+
+
+.family-table th {
+  background-color: #f7c9a9;
+}
+
+.family-table tbody tr:nth-child(even) {
+  background-color: #ffe4cf;
+}
+.gallery-video {
+  max-width: 900px;
+  margin: 2rem auto 3rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.gallery-video h3 {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+}
+
+.gallery-video p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-video video {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 1rem;
+  border-radius: 1rem;
+  border: 3px solid #e0a57a;
+}
+
+.gallery-note a {
+  font-weight: 600;
+  color: #5c3620;
+  text-decoration: underline;
 }
